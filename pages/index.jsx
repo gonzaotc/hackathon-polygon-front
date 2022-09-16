@@ -121,10 +121,56 @@ export default function Home() {
 
 	return (
 		<Layout>
-			<div className="px-32 w-full">
+			<div className="w-full border-2">
 				<h1 className="text-4xl text-white font-semibold">
 					Current Prize
 				</h1>
+				<div className="flex rounded-2xl bg-white shadow-lg mt-8 hover:shadow-2xl hover:cursor-pointer transition-all">
+					<img
+						src={'/pool1.png'}
+						alt=""
+						className="rounded-xl h-80"
+					/>
+					<div className="p-8 flex flex-col justify-center items-center gap-8 w-full h-full">
+						<div className="">
+							<h2 className="text-2xl text-black font-medium">
+								{'Experience the world cup in qatar'}
+							</h2>
+							<p className="text-[#ED652B]">X WEFOREST</p>
+							<hr className="w-full mt-4" />
+							<Timer />
+						</div>
+						<Link href={'/pool'}>
+							<button className="mt-4 lg:px-16 px-8 py-2 bg-[#ED652B] rounded-md border-2 border-black	 hover:shadow-2xl hover:bg-[#fd692a] transition-all">
+								JOIN POOL
+							</button>
+						</Link>
+					</div>
+				</div>
+
+				<div className="flex rounded-2xl bg-white shadow-lg mt-8 hover:shadow-2xl hover:cursor-pointer transition-all">
+					<img
+						src={'/pool1.png'}
+						alt=""
+						className="rounded-xl h-80"
+					/>
+					<div className="p-8 flex flex-col justify-center items-center gap-8 w-full h-full">
+						<div className="">
+							<h2 className="text-2xl text-black font-medium">
+								{'Experience the world cup in qatar'}
+							</h2>
+							<p className="text-[#ED652B]">X WEFOREST</p>
+							<hr className="w-full mt-4" />
+							<Timer />
+						</div>
+						<Link href={'/pool'}>
+							<button className="mt-4 lg:px-16 px-8 py-2 bg-[#ED652B] rounded-md border-2 border-black	 hover:shadow-2xl hover:bg-[#fd692a] transition-all">
+								JOIN POOL
+							</button>
+						</Link>
+					</div>
+				</div>
+
 				<div className="flex rounded-2xl bg-white shadow-lg mt-8 hover:shadow-2xl hover:cursor-pointer transition-all">
 					<img
 						src={'/pool1.png'}

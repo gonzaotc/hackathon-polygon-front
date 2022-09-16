@@ -1,11 +1,11 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 import { Box, Slider } from '@mui/material'
 import { useState, useEffect } from 'react'
 
 import { useContract, useSigner } from 'wagmi'
-import abi from '../contracts/PrizePool.json'
-import ControlledTokenAbi from '../contracts/ControlledToken.json'
+import abi from '../../contracts/PrizePool.json'
+import ControlledTokenAbi from '../../contracts/ControlledToken.json'
 import { ethers } from 'ethers'
 
 const Withdraw = () => {
