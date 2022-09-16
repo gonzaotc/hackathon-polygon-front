@@ -16,9 +16,16 @@ module.exports = {
 				dark2: '#000000',
 			},
 			spacing: {
-				'1.25': '0.3125rem',
-			}
+				1.25: '0.3125rem',
+			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		function ({ addVariant }) {
+			addVariant('child', '& > *')
+			addVariant('child-hover', '& > *:hover')
+			addVariant('hover-child-image', '&:hover > img')
+
+		},
+	],
 }
