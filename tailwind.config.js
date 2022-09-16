@@ -17,6 +17,7 @@ module.exports = {
 			},
 			spacing: {
 				1.25: '0.3125rem',
+				1.75: '0.4375rem',
 			},
 		},
 	},
@@ -25,7 +26,7 @@ module.exports = {
 			addVariant('child', '& > *')
 			addVariant('child-hover', '& > *:hover')
 			addVariant('hover-child-image', '&:hover > img')
-
 		},
+		require('tailwind-scrollbar-hide'),
 	],
 }

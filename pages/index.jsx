@@ -121,73 +121,73 @@ export default function Home() {
 
 	return (
 		<Layout>
-			<div className="w-full border-2">
-				<h1 className="text-4xl text-white font-semibold">
+			<div className="w-full">
+				<h2 className="text-5xl font-semibold text-white">
 					Current Prize
-				</h1>
-				<div className="flex rounded-2xl bg-white shadow-lg mt-8 hover:shadow-2xl hover:cursor-pointer transition-all">
+				</h2>
+				<div className="mt-8 flex rounded-2xl bg-white shadow-lg transition-all hover:cursor-pointer hover:shadow-2xl">
 					<img
 						src={'/pool1.png'}
 						alt=""
-						className="rounded-xl h-80"
+						className="h-80 rounded-xl"
 					/>
-					<div className="p-8 flex flex-col justify-center items-center gap-8 w-full h-full">
+					<div className="flex h-full w-full flex-col items-center justify-center gap-8 p-8">
 						<div className="">
-							<h2 className="text-2xl text-black font-medium">
+							<h2 className="text-2xl font-medium text-black">
 								{'Experience the world cup in qatar'}
 							</h2>
 							<p className="text-[#ED652B]">X WEFOREST</p>
-							<hr className="w-full mt-4" />
+							<hr className="mt-4 w-full" />
 							<Timer />
 						</div>
 						<Link href={'/pool'}>
-							<button className="mt-4 lg:px-16 px-8 py-2 bg-[#ED652B] rounded-md border-2 border-black	 hover:shadow-2xl hover:bg-[#fd692a] transition-all">
+							<button className="mt-4 rounded-md border-2 border-black bg-[#ED652B] px-8 py-2 transition-all	 hover:bg-[#fd692a] hover:shadow-2xl lg:px-16">
 								JOIN POOL
 							</button>
 						</Link>
 					</div>
 				</div>
 
-				<div className="flex rounded-2xl bg-white shadow-lg mt-8 hover:shadow-2xl hover:cursor-pointer transition-all">
+				<div className="mt-8 flex rounded-2xl bg-white shadow-lg transition-all hover:cursor-pointer hover:shadow-2xl">
 					<img
 						src={'/pool1.png'}
 						alt=""
-						className="rounded-xl h-80"
+						className="h-80 rounded-xl"
 					/>
-					<div className="p-8 flex flex-col justify-center items-center gap-8 w-full h-full">
+					<div className="flex h-full w-full flex-col items-center justify-center gap-8 p-8">
 						<div className="">
-							<h2 className="text-2xl text-black font-medium">
+							<h2 className="text-2xl font-medium text-black">
 								{'Experience the world cup in qatar'}
 							</h2>
 							<p className="text-[#ED652B]">X WEFOREST</p>
-							<hr className="w-full mt-4" />
+							<hr className="mt-4 w-full" />
 							<Timer />
 						</div>
 						<Link href={'/pool'}>
-							<button className="mt-4 lg:px-16 px-8 py-2 bg-[#ED652B] rounded-md border-2 border-black	 hover:shadow-2xl hover:bg-[#fd692a] transition-all">
+							<button className="mt-4 rounded-md border-2 border-black bg-[#ED652B] px-8 py-2 transition-all	 hover:bg-[#fd692a] hover:shadow-2xl lg:px-16">
 								JOIN POOL
 							</button>
 						</Link>
 					</div>
 				</div>
 
-				<div className="flex rounded-2xl bg-white shadow-lg mt-8 hover:shadow-2xl hover:cursor-pointer transition-all">
+				<div className="mt-8 flex rounded-2xl bg-white shadow-lg transition-all hover:cursor-pointer hover:shadow-2xl">
 					<img
 						src={'/pool1.png'}
 						alt=""
-						className="rounded-xl h-80"
+						className="h-80 rounded-xl"
 					/>
-					<div className="p-8 flex flex-col justify-center items-center gap-8 w-full h-full">
+					<div className="flex h-full w-full flex-col items-center justify-center gap-8 p-8">
 						<div className="">
-							<h2 className="text-2xl text-black font-medium">
+							<h2 className="text-2xl font-medium text-black">
 								{'Experience the world cup in qatar'}
 							</h2>
 							<p className="text-[#ED652B]">X WEFOREST</p>
-							<hr className="w-full mt-4" />
+							<hr className="mt-4 w-full" />
 							<Timer />
 						</div>
 						<Link href={'/pool'}>
-							<button className="mt-4 lg:px-16 px-8 py-2 bg-[#ED652B] rounded-md border-2 border-black	 hover:shadow-2xl hover:bg-[#fd692a] transition-all">
+							<button className="mt-4 rounded-md border-2 border-black bg-[#ED652B] px-8 py-2 transition-all	 hover:bg-[#fd692a] hover:shadow-2xl lg:px-16">
 								JOIN POOL
 							</button>
 						</Link>

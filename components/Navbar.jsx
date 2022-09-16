@@ -14,7 +14,7 @@ const Navbar = () => {
 						return (
 							<button onClick={openConnectModal}>
 								<BorderWrapper
-									size={'w-[175px] h-[40px]'}
+									size={'w-[175px] h-[45px]'}
 									className={'font-bold'}
 								>
 									CONNECT WALLET

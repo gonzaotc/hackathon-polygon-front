@@ -5,8 +5,8 @@ import Card from '../../components/Card'
 const nfts = () => {
 	return (
 		<Layout>
-			<div className="flex flex-col justify-center gap-8 mx-12 mb-12 ">
-				<div className="shadow-2xl p-8 rounded-2xl w-full bg-gradient-to-r bg-[#ED652B]">
+			<div className="mb-12 flex w-full flex-col justify-center gap-8 ">
+				<div className="w-full rounded-2xl bg-[#ED652B] bg-gradient-to-r p-8 shadow-2xl">
 					<p className="text-2xl text-white">
 						We created the Proof of Donation NFTs taking the first
 						step on the road to add transparency in donations. We
