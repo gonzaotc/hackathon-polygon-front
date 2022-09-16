@@ -1,9 +1,10 @@
-const borderWrapper = ({ children, width, height, className }) => {
+const borderWrapper = ({ children, size, className }) => {
+
 	return (
-		<div className="relative">
-            <div className={`z-20 flex w-${width} h-${height} border-[2px] border-black bg-white rounded-xl justify-center items-center`}>
+		<div className="relative cursor-pointer">
+            <div className={`z-20 flex border-[2px] border-black bg-white rounded-xl justify-center items-center ${size}`}>
                 <p className={`${className}`}>{children}</p>
-			    <div className={`z-10 absolute bg-transparent border-[3px] border-white w-${width} h-${height} left-[0.2rem] top-[0.2rem] rounded-xl`} />
+			    <div className={`z-10 absolute bg-transparent border-[3px] border-white left-[5px] top-[5px] rounded-xl ${size}`} />
             </div>
 
 		</div>
