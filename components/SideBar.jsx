@@ -15,7 +15,7 @@ const SideBar = () => {
 
 	return (
 		<div className="flex w-[17rem] border-2 border-yellow-500">
-			<div className="fixed flex h-[calc(100vh-3rem-150px-1rem)] flex-col justify-between border-purple-500 2xl:h-[calc(100vh-4rem-150px-1rem)]">
+			<div className="fixed flex h-[calc(100vh-3rem-160px-1rem)] flex-col justify-between border-purple-500 2xl:h-[calc(100vh-4rem-160px-1rem)]">
 				<div className="flex flex-col justify-between gap-4">
 					<Link href="/">
 						<div
@@ -65,22 +65,19 @@ const SideBar = () => {
 					</button>
 					<div className="flex w-full justify-between ">
 						<BorderWrapper
-							width={20}
-							height={20}
+							size={"w-[60px] h-[60px]"}
 							className="text-black "
 						>
 							A
 						</BorderWrapper>
 						<BorderWrapper
-							width={20}
-							height={20}
+							size={"w-[60px] h-[60px]"}
 							className="text-black "
 						>
 							B
 						</BorderWrapper>
 						<BorderWrapper
-							width={20}
-							height={20}
+							size={"w-[60px] h-[60px]"}
 							className="text-black "
 						>
 							C
