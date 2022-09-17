@@ -122,7 +122,7 @@ export default function Home() {
 	const prizeData = {
 		name: 'Experience the World Cup in Qatar',
 		company: 'Helps Weforest',
-		image: 'pool1.png',
+		images: ['pool1.png', 'pool2.png', 'pool1.png', 'pool1.png'],
 	}
 
 	return (
