@@ -6,7 +6,7 @@ import WavesIcon from '@mui/icons-material/Waves'
 import ColorLensIcon from '@mui/icons-material/ColorLens'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import { useRouter } from 'next/router'
-import BorderWrapper from './wrapers/BorderWrapper'
+import BorderWrapper from './Wrappers/BorderWrapper'
 import Image from 'next/image'
 
 const SideBar = () => {
@@ -14,7 +14,7 @@ const SideBar = () => {
 
 	return (
 		<div className="flex w-[17rem]">
-			<div className="fixed flex h-[calc(100vh-3rem-150px-1rem)] flex-col justify-between 2xl:h-[calc(100vh-4rem-150px-1rem)]">
+			<div className="fixed flex h-[calc(100vh-3rem-150px-1.5rem)] flex-col justify-between 2xl:h-[calc(100vh-4rem-150px-1.5rem)]">
 				<div className="flex flex-col justify-between gap-4">
 					<Link href="/">
 						<div
@@ -60,16 +60,18 @@ const SideBar = () => {
 						/>
 						<p className="text-2xl">Help</p>
 					</button>
-					<div className="flex w-full justify-between gap-4">
+					<div className="flex w-full justify-between gap-5">
 						<BorderWrapper
-							size={'w-[60px] h-[60px]'}
-							className=" text-2xl font-bold text-black "
+							className="text-2xl font-bold text-black"
+							position="bottom-1.25 right-1.25"
+							contraPosition="top-1.25 left-1.25"
+							outline="outline outline-[3px] outline-black"
 						>
 							<a
 								href="https://discord.com/"
 								target="_blank"
-								noreferrer
-								className="flex items-center justify-center"
+								// noreferrer
+								className="flex h-[55px] w-[55px] items-center justify-center bg-white"
 							>
 								<Image
 									src="/discord.png"
@@ -79,14 +81,16 @@ const SideBar = () => {
 							</a>
 						</BorderWrapper>
 						<BorderWrapper
-							size={'w-[60px] h-[60px]'}
-							className=" text-2xl font-bold text-black"
+							className="text-2xl font-bold text-black"
+							position="bottom-1.25 right-1.25"
+							contraPosition="top-1.25 left-1.25"
+							outline="outline outline-[3px] outline-black"
 						>
 							<a
 								href="https://medium.com/"
 								target="_blank"
-								noreferrer
-								className="flex items-center justify-center"
+								// noreferrer
+								className="flex h-[55px] w-[55px] items-center justify-center bg-white"
 							>
 								<Image
 									src="/medium.png"
@@ -96,14 +100,16 @@ const SideBar = () => {
 							</a>
 						</BorderWrapper>
 						<BorderWrapper
-							size={'w-[60px] h-[60px]'}
 							className="text-2xl font-bold text-black"
+							position="bottom-1.25 right-1.25"
+							contraPosition="top-1.25 left-1.25"
+							outline="outline outline-[3px] outline-black"
 						>
 							<a
 								href="https://twitter.com/"
 								target="_blank"
-								noreferrer
-								className="flex items-center justify-center"
+								// noreferrer
+								className="flex h-[55px] w-[55px] items-center justify-center bg-white"
 							>
 								<Image
 									src="/twitter.png"

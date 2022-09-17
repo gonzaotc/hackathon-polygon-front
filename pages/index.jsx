@@ -6,8 +6,8 @@ import ControlledTokenAbi from '../contracts/ControlledToken.json'
 import Layout from '../components/Layout'
 import { ethers } from 'ethers'
 // import { useSendTransactionWrapper } from "../hooks/useSendTransactionWrapper";
-import Link from 'next/link'
-import Timer from '../components/Timer'
+import BorderWrapper from '../components/Wrappers/BorderWrapper'
+import PrizeCard from '../components/Cards/PrizeCard'
 
 export default function Home() {
 	// const sendTx = useSendTransactionWrapper();
@@ -119,81 +119,26 @@ export default function Home() {
 	//   uint256 donationPercentage
 	// )
 
+	const prizeData = {
+		name: 'Experience the World Cup in Qatar',
+		company: 'Helps Weforest',
+		image: 'pool1.png',
+	}
+
 	return (
 		<Layout>
-			<div className="w-full">
-				<h2 className="text-5xl font-semibold text-white">
-					Current Prize
-				</h2>
-				<div className="mt-8 flex rounded-2xl bg-white shadow-lg transition-all hover:cursor-pointer hover:shadow-2xl">
-					<img
-						src={'/pool1.png'}
-						alt=""
-						className="h-80 rounded-xl"
-					/>
-					<div className="flex h-full w-full flex-col items-center justify-center gap-8 p-8">
-						<div className="">
-							<h2 className="text-2xl font-medium text-black">
-								{'Experience the world cup in qatar'}
-							</h2>
-							<p className="text-[#ED652B]">X WEFOREST</p>
-							<hr className="mt-4 w-full" />
-							<Timer />
-						</div>
-						<Link href={'/pool'}>
-							<button className="mt-4 rounded-md border-2 border-black bg-[#ED652B] px-8 py-2 transition-all	 hover:bg-[#fd692a] hover:shadow-2xl lg:px-16">
-								JOIN POOL
-							</button>
-						</Link>
-					</div>
-				</div>
+			<h2 className="mb-8 text-5xl font-semibold text-white">
+				Current Prize
+			</h2>
 
-				<div className="mt-8 flex rounded-2xl bg-white shadow-lg transition-all hover:cursor-pointer hover:shadow-2xl">
-					<img
-						src={'/pool1.png'}
-						alt=""
-						className="h-80 rounded-xl"
-					/>
-					<div className="flex h-full w-full flex-col items-center justify-center gap-8 p-8">
-						<div className="">
-							<h2 className="text-2xl font-medium text-black">
-								{'Experience the world cup in qatar'}
-							</h2>
-							<p className="text-[#ED652B]">X WEFOREST</p>
-							<hr className="mt-4 w-full" />
-							<Timer />
-						</div>
-						<Link href={'/pool'}>
-							<button className="mt-4 rounded-md border-2 border-black bg-[#ED652B] px-8 py-2 transition-all	 hover:bg-[#fd692a] hover:shadow-2xl lg:px-16">
-								JOIN POOL
-							</button>
-						</Link>
-					</div>
-				</div>
-
-				<div className="mt-8 flex rounded-2xl bg-white shadow-lg transition-all hover:cursor-pointer hover:shadow-2xl">
-					<img
-						src={'/pool1.png'}
-						alt=""
-						className="h-80 rounded-xl"
-					/>
-					<div className="flex h-full w-full flex-col items-center justify-center gap-8 p-8">
-						<div className="">
-							<h2 className="text-2xl font-medium text-black">
-								{'Experience the world cup in qatar'}
-							</h2>
-							<p className="text-[#ED652B]">X WEFOREST</p>
-							<hr className="mt-4 w-full" />
-							<Timer />
-						</div>
-						<Link href={'/pool'}>
-							<button className="mt-4 rounded-md border-2 border-black bg-[#ED652B] px-8 py-2 transition-all	 hover:bg-[#fd692a] hover:shadow-2xl lg:px-16">
-								JOIN POOL
-							</button>
-						</Link>
-					</div>
-				</div>
-			</div>
+			<BorderWrapper
+				className="mb-60"
+				rounded="rounded-xl"
+				position="bottom-1.75 right-1.75"
+				contraPosition="top-1.75 left-1.75"
+			>
+				<PrizeCard prizeData={prizeData} />
+			</BorderWrapper>
 		</Layout>
 	)
 }

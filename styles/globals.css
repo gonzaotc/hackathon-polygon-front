@@ -1,7 +1,6 @@
 html,
 body {
-	padding: 0;
-	margin: 0;
+
 	font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
 		Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
 }
@@ -53,6 +52,4 @@ a {
 	text-decoration: none;
 }
 
-* {
-	box-sizing: border-box;
-}
+
