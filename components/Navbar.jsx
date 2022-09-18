@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import BorderWrapper from './wrapers/BorderWrapper'
+import BorderWrapper from './Wrappers/BorderWrapper'
 
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 
@@ -14,10 +14,15 @@ const Navbar = () => {
 						return (
 							<button onClick={openConnectModal}>
 								<BorderWrapper
-									size={'w-[175px] h-[40px]'}
-									className={'font-bold'}
+									className={'h-[45px] w-[175px] font-bold'}
+									rounded="rounded-xl"
+									position="bottom-1.25 right-1.25"
+									contraPosition="top-1.25 left-1.25"
+									outline="outline outline-[3px] outline-black"
 								>
-									CONNECT WALLET
+									<div className="flex h-full w-full items-center justify-center rounded-2lg bg-white">
+										CONNECT WALLET
+									</div>
 								</BorderWrapper>
 							</button>
 						)

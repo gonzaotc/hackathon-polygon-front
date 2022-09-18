@@ -5,10 +5,10 @@ import Link from 'next/link'
 const account = () => {
 	return (
 		<Layout>
-			<div className="px-32 w-full flex flex-col gap-4">
-				<h1 className="text-6xl text-white font-semibold ">
+			<div className="w-full flex flex-col gap-4">
+				<h2 className="text-5xl text-white font-semibold ">
 					My account
-				</h1>
+				</h2>
 				<p className="text-white text-xl">ACCOUNT OVERVIEW</p>
 				<div className="bg-[#ED652B] rounded-md p-12">
 					<p className="text-black text-2xl">DEPOSITS</p>

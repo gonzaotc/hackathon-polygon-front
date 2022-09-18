@@ -27,6 +27,10 @@
     "react-dom": "18.1.0",
     "react-i18next": "^11.18.4",
     "swiper": "^8.4.2",
+<<<<<<< HEAD
+=======
+    "tailwind-scrollbar-hide": "^1.1.7",
+>>>>>>> bef1d50cc7a3d7a4b2e08aea3ed548787090a6bb
     "wagmi": "^0.3.5",
     "web3": "^1.7.3"
   },
