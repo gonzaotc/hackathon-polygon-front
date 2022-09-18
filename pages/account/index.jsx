@@ -32,39 +32,16 @@ const badges = [
 ]
 
 const Index = () => {
-	const [showPools, setShowPools] = useState(true)
-	const [showPods, setShowPods] = useState(false)
-	const [showInfo, setShowInfo] = useState(false)
+	const [showType, setShowType] = useState('pools')
 
 	const switchHandler = (option) => {
-		switch (option) {
-			case 'pools':
-				setShowPools(true)
-				setShowPods(false)
-				setShowInfo(false)
-				break
-			case 'pods':
-				setShowPools(false)
-				setShowPods(true)
-				setShowInfo(false)
-				break
-			case 'info':
-				setShowPools(false)
-				setShowPods(false)
-				setShowInfo(true)
-				break
-			default:
-				break
-		}
+		setShowType(option)
 	}
 
 	const formHandler = (event) => {
 		event.preventDefault()
-
 		console.log(event.target.name.value)
-
 		console.log(event.target.email.value)
-
 		console.log(event.target.checkbox.checked)
 	}
 
@@ -74,52 +51,55 @@ const Index = () => {
 				<h2 className="title">My account</h2>
 
 				<div className="flex flex-row items-center justify-between">
-					<div className="my-10 flex w-fit flex-row rounded-lg border">
+					<div className="my-10 flex w-fit flex-row rounded-lg border ">
 						<div
-							className={`rounded-lg ${
-								showPools && 'border bg-blue1'
+							className={` box-content rounded-lg bg-transparent py-0.5 outline outline-transparent transition-all duration-400 ${
+								showType == 'pools' &&
+								'!bg-blue1 outline-[1.5px] !outline-white/70'
 							}`}
 						>
 							<button
 								onClick={() => {
 									switchHandler('pools')
 								}}
-								className="px-5 py-1"
+								className="px-5 py-0.75 font-semibold"
 							>
 								Pools
 							</button>
 						</div>
 						<div
-							className={`rounded-lg ${
-								showPods && 'border bg-blue1'
+							className={` box-content rounded-lg bg-transparent py-0.5 outline outline-transparent transition-all duration-400 ${
+								showType == 'pods' &&
+								'!bg-blue1 outline-[1.5px] !outline-white/70'
 							}`}
 						>
 							<button
 								onClick={() => {
 									switchHandler('pods')
 								}}
-								className="px-5 py-1"
+								className="px-5 py-0.75 font-semibold"
 							>
 								PODs
 							</button>
 						</div>
 						<div
-							className={`rounded-lg ${
-								showInfo && 'border bg-blue1'
+							className={` box-content rounded-lg bg-transparent py-0.5 outline outline-transparent transition-all duration-400 ${
+								showType == 'info' &&
+								'!bg-blue1 outline-[1.5px] !outline-white/70'
 							}`}
 						>
 							<button
 								onClick={() => {
 									switchHandler('info')
 								}}
-								className="px-5 py-1"
+								className="px-5 py-0.75 font-semibold"
 							>
 								Personal info
 							</button>
 						</div>
 					</div>
 
-					{showPods && (
+					{showType == 'pods' && (
 						<BorderWrapper
 							className={'h-fit w-fit font-bold'}
 							rounded="rounded-lg"
@@ -141,24 +121,24 @@ const Index = () => {
 					)}
 				</div>
 
-				{showPools && (
+				{showType == 'pools' && (
 					<>
 						<div className="flex flex-col gap-5">
-							<h3 className="text-lg font-normal">
+							<h3 className="mb-2 text-lg font-semibold">
 								ACCOUNT OVERVIEW
 							</h3>
-							<div className="rounded-lg bg-blue1 p-12">
-								<p className="text-2xl tracking-tight">
+							<div className="rounded-2xl bg-blue1 p-10">
+								<p className="mb-1 text-xl font-semibold tracking-tight">
 									DEPOSITS
 								</p>
-								<h2 className="mt-2 text-5xl font-bold ">
+								<h2 className=" text-5xl font-bold ">
 									31,066.08 USDC
 								</h2>
 							</div>
 						</div>
 
 						<div className="mt-20 flex flex-col gap-3">
-							<h3 className="mb-2 text-lg font-normal">
+							<h3 className="mb-4 text-lg font-semibold">
 								POOLS I&apos;VE JOINED
 							</h3>
 
@@ -178,7 +158,7 @@ const Index = () => {
 					</>
 				)}
 
-				{showPods && (
+				{showType == 'pods' && (
 					<div className="mt-5 mb-20 flex flex-col">
 						<h3 className="mb-16 text-3xl font-semibold tracking-tight">
 							My collection
@@ -200,16 +180,16 @@ const Index = () => {
 					</div>
 				)}
 
-				{showInfo && (
+				{showType == 'info' && (
 					<div className="flex flex-col">
-						<p className="text-xl">
+						<p className="mb-6 text-xl">
 							Don&apos;t worry,{' '}
 							<span className="font-bold">
 								we value anonymity
 							</span>{' '}
 							as much as you do!
 						</p>
-						<p className="mt-10 text-xl">
+						<p className="text-xl">
 							We don&apos;t need your personal info, but iw would
 							be much easier to contact you by email{' '}
 							<span className="font-bold">
@@ -236,9 +216,13 @@ const Index = () => {
 								/>
 							</div>
 
-							<div className="flex flex-row items-center gap-3">
-								<input type="checkbox" id="checkbox" />
-								<p className="text-gray-400">
+							<div className="flex items-center gap-2.5">
+								<input
+									type="checkbox"
+									id="checkbox"
+									className="accent-black relative mt-[0.2rem] w-[0.95rem] h-[0.95rem] invert"
+								/>
+								<p className="text-white/70">
 									Join our mailing list to receive news on
 									awesome prizes
 								</p>

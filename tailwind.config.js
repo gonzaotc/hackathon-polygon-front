@@ -23,13 +23,27 @@ module.exports = {
 			spacing: {
 				1.25: '0.3125rem',
 				1.75: '0.4375rem',
+				0.75: '0.1875rem',
+				0.5: '0.125rem',
+				0.25: '0.0625rem',
 			},
 			opacity: {
 				7.5: '.075',
 				6.25: '.0625',
 			},
+			outlineWidth: {
+				1: '1px',
+				1.5: '1.5px',
+				2: '2px',
+				3: '3px',
+				4: '4px',
+				5: '5px',
+			},
 			borderRadius: {
 				'2lg': '0.625rem',
+			},
+			transitionDuration: {
+				400: '400ms',
 			},
 		},
 	},
