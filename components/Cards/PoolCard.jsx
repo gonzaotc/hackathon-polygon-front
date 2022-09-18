@@ -4,7 +4,7 @@ import PressableButton from '../Wrappers/PressableButton'
 const PoolCard = ({ title, photo, isActive, enddate, isWinner }) => {
 	return (
 		<div className="flex h-[10rem] w-full flex-row gap-2">
-			<div className=" w-[14rem]">
+			<div className="max-h-[10rem] min-h-[10rem] min-w-[10rem] max-w-[10rem]">
 				<img
 					className="h-full w-full rounded-xl bg-no-repeat object-cover	"
 					alt="pool photo"
