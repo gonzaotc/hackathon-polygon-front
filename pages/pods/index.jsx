@@ -15,7 +15,7 @@ const Index = () => {
 					<div className="relative flex h-[35rem] w-[35rem] flex-col text-black">
 						<div className="flex items-center justify-end">
 							<button
-								className="mt-4 mr-8 self-end text-xl text-gray-400 hover:text-gray-700"
+								className="z-40 mt-4 mr-8 self-end text-xl text-gray-400 hover:text-gray-700"
 								onClick={() => {
 									setModalIsOpen(false)
 								}}
@@ -129,70 +129,3 @@ const Index = () => {
 }
 
 export default Index
-
-{
-	/* <div className="mb-12 flex w-full flex-col justify-center gap-8 ">
-				<div className="w-full rounded-2xl bg-[#ED652B] bg-gradient-to-r p-8 shadow-2xl">
-					<p className="text-2xl text-white">
-						We created the Proof of Donation NFTs taking the first
-						step on the road to add transparency in donations. We
-						record the full cycle of the payment from user to use in
-						the PoDs metadata.
-					</p>
-					<p className="mt-8 text-2xl text-white">
-						You can also collect our PoDs and have future benefits
-						and badges from the campaigns you help fund!
-					</p>
-				</div>
-				<div className="w-[60%] rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-2 shadow-2xl">
-					<p className="flex text-2xl text-white">
-						You have generated in donations:{' '}
-						<span className="ml-4 text-3xl font-bold text-teal-300">
-							$1450
-						</span>
-					</p>
-					<hr className="my-4  text-white" />
-					<p className="flex text-2xl text-white">
-						Total donations made with Wooy:{' '}
-						<span className="ml-4 text-3xl font-bold text-teal-300">
-							$120,000,000
-						</span>
-					</p>
-				</div>
-				<div className="grid grid-cols-3 gap-7">
-					<Card
-						image="/donation1.png"
-						foundationName={'Impact Market'}
-						donatedAmount="100 Matic"
-						title={
-							'Win a ticket for the worldcup final x Impact market'
-						}
-						desc={'This will be the best prize of the world'}
-						buttonlabel={'Claim PoD'}
-						path="pods/1"
-					/>
-
-					<Card
-						image="/donation2.png"
-						foundationName={'Camillus House'}
-						donatedAmount="100 Matic"
-						title={'Win this Bored Ape x Camillus House'}
-						desc={'This will be the best prize of the world'}
-						buttonlabel={'Claim PoD'}
-						path="nfts/2"
-					/>
-
-					<Card
-						image="/donation3.png"
-						foundationName={'Impact Market'}
-						donatedAmount="100 Matic"
-						title={
-							'Travel with the Rolling Stones on Tour x Ukranian Cultural Foundation'
-						}
-						desc={'This will be the best prize of the world'}
-						buttonlabel={'Claim PoD'}
-						path="nfts/3"
-					/>
-				</div>
-			</div> */
-}
