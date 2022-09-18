@@ -49,3 +49,23 @@ a {
 		)
 		0% 0% no-repeat padding-box;
 }
+
+#connectButtonStyle div {
+	display: flex;
+	background-color: white;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	@apply rounded-2lg;
+}
+
+#connectButtonStyle div button {
+	text-transform: uppercase;
+	text-align: center;
+	background-color: white;
+	color: black;
+	height: 100%;
+	width: 100%;
+	@apply tracking-tight;
+}
