@@ -112,16 +112,6 @@ const Index = () => {
 				<div className="mb-36 mt-24">
 					<h2 className="title">Coming soon</h2>
 
-<<<<<<< HEAD
-				<div className="flex flex-col">
-					<div className="bgCircles mt-10 h-[420px]" />
-					<PressableButton
-						color="blue"
-						className="mt-20 w-[40%] self-center text-white"
-					>
-						ARTIST IFANA
-					</PressableButton>
-=======
 					<div className="flex flex-col">
 						<div className="bgCircles mt-10 h-[420px]" />
 						<PressableButton
@@ -132,7 +122,6 @@ const Index = () => {
 							ARTIST IFANA
 						</PressableButton>
 					</div>
->>>>>>> 60e1bed368d861ab62dc81b22eb7401767d59093
 				</div>
 			</Layout>
 		</>
