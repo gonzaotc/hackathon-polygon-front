@@ -4,11 +4,11 @@ import Navbar from './Navbar'
 
 const Layout = (props) => {
 	return (
-		<div className="container mx-auto min-h-screen px-20 2xl:px-0">
+		<div className="container mx-auto min-h-screen px-20 2xl:px-10">
 			<Navbar />
-			<main className="mt-12 flex h-full justify-between gap-[11vw] 2xl:mt-16 ">
+			<main className="mt-12 w-full flex h-full justify-between 2xl:mt-16">
 				<SideBar />
-				<div className="w-full">
+				<div className="w-8/12">
 					{props.children}
 				</div>
 			</main>

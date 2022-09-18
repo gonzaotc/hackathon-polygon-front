@@ -13,7 +13,7 @@ const SideBar = () => {
 	const router = useRouter()
 
 	return (
-		<div className="flex w-[17rem]">
+		<div className="flex min-w-[14rem]">
 			<div className="fixed flex h-[calc(100vh-3rem-150px-1.5rem)] flex-col justify-between 2xl:h-[calc(100vh-4rem-150px-1.5rem)]">
 				<div className="flex flex-col justify-between gap-4">
 					<Link href="/">
