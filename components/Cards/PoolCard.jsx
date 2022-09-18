@@ -5,7 +5,7 @@ const PoolCard = ({ title, photo, isActive, enddate, isWinner }) => {
 	return (
 		<div className="flex w-full flex-row gap-2">
 			<img
-				className="h-40 w-52 rounded-lg bg-cover bg-center bg-no-repeat"
+				className="max-h-[10rem] min-h-[10rem] min-w-[10rem] max-w-[10rem] rounded-lg bg-cover bg-center bg-no-repeat"
 				alt="pool photo"
 				src={photo}
 			/>
@@ -28,7 +28,7 @@ const PoolCard = ({ title, photo, isActive, enddate, isWinner }) => {
 					</div>
 				) : (
 					<div className="flex w-[63%] flex-col self-start border-b-[2px] border-black pb-2">
-						<p className="tracking-tight text-gray-300">
+						<p className="tracking-tight text-gray-500">
 							CLOSED ON: {enddate}
 						</p>
 						<h2 className="text-lg font-bold tracking-tight text-black">

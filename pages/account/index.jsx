@@ -15,7 +15,7 @@ const pools = [
 	},
 	{
 		title: 'Viví un recital único con Javier Calamaro',
-		photo: '/pool2.png',
+		photo: '/pool2.jpeg',
 		isActive: false,
 		enddate: '09/06',
 		isWinner: true,
