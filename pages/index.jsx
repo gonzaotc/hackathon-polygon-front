@@ -8,6 +8,9 @@ import { ethers } from 'ethers'
 // import { useSendTransactionWrapper } from "../hooks/useSendTransactionWrapper";
 import BorderWrapper from '../components/Wrappers/BorderWrapper'
 import PrizeCard from '../components/Cards/PrizeCard'
+import EventCard from '../components/Cards/EventCard'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
 
 export default function Home() {
 	// const sendTx = useSendTransactionWrapper();
@@ -125,12 +128,45 @@ export default function Home() {
 		images: ['pool1.png', 'pool2.png', 'pool1.png', 'pool1.png'],
 	}
 
+	const comingData = [
+		{
+			image: 'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?cs=srgb&dl=pexels-wolfgang-2747449.jpg&fm=jpg',
+			name: 'Event1 super special with a star featured, we are all gona make it.',
+			company: 'COMPANY1 NAME',
+			startDate: 'August 05, 2022',
+		},
+		{
+			image: 'https://dfmas.df.cl/dfmas/site/artic/20220818/imag/foto_0000000520220818214557/harry-styles-1656061342.jpg',
+			name: 'Event2 super special with a star featured, we are all gona make it.',
+			company: 'COMPANY2 NAME',
+			startDate: 'August 25, 2022',
+		},
+		{
+			image: 'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?cs=srgb&dl=pexels-wolfgang-2747449.jpg&fm=jpg',
+			name: 'Event3 super special with a star featured, we are all gona make it.',
+			company: 'COMPANY3 NAME',
+			startDate: 'August 05, 2022',
+		},
+		{
+			image: 'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?cs=srgb&dl=pexels-wolfgang-2747449.jpg&fm=jpg',
+			name: 'Event4 super special with a star featured, we are all gona make it.',
+			company: 'COMPANY4 NAME',
+			startDate: 'August 05, 2022',
+		},
+		{
+			image: 'https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?cs=srgb&dl=pexels-wolfgang-2747449.jpg&fm=jpg',
+			name: 'Event5 super special with a star featured, we are all gona make it.',
+			company: 'COMPANY5 NAME',
+			startDate: 'August 05, 2022',
+		},
+	]
+
 	return (
 		<Layout>
 			<h2 className="title mb-8">Current Prize</h2>
 
 			<BorderWrapper
-				className="mb-60"
+				className="mb-[6rem] "
 				rounded="rounded-xl"
 				position="bottom-1.75 right-1.75"
 				contraPosition="top-1.75 left-1.75"
@@ -138,6 +174,46 @@ export default function Home() {
 			>
 				<PrizeCard prizeData={prizeData} />
 			</BorderWrapper>
+
+			<h2 className="mb-8 text-5xl font-semibold text-white">
+				Coming up this season
+			</h2>
+
+			<div className="relative w-full">
+				<>
+					<Swiper
+						spaceBetween={20}
+						slidesPerView="auto"
+						navigation
+						freeMode={true}
+						// loop={true}
+						// loopedSlides={3}
+						// pagination={{ clickable: true }}
+						// scrollbar={{ draggable: true }}
+					>
+						{comingData.map((event, index) => {
+							return (
+								<SwiperSlide
+									key={index}
+									className="!w-[17rem] 2xl:!w-[18rem]"
+								>
+									<EventCard event={event} />
+								</SwiperSlide>
+							)
+						})}
+					</Swiper>
+					<span className="absolute top-[50%] left-[-4rem] translate-y-[-50%] text-5xl font-bold text-white">
+						I
+					</span>
+					<span className="absolute top-[50%] right-[-4rem] translate-y-[-50%] text-5xl font-bold text-white">
+						D
+					</span>
+				</>
+			</div>
+
+			<h3 className="my-24 text-center text-xl font-semibold text-white underline decoration-1 underline-offset-4">
+				PAST PRIZES
+			</h3>
 		</Layout>
 	)
 }
