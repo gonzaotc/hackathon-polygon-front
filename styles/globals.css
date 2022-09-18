@@ -13,6 +13,12 @@ a {
 @tailwind components;
 @tailwind utilities;
 
+.title {
+	@apply text-5xl font-semibold tracking-tight text-white;
+}
+
+/* Background image of the orbs in pods */
+
 .bgCircles {
 	background-image: url(../public/Grupo1997.png);
 	background-size: cover;
@@ -20,12 +26,16 @@ a {
 	background-repeat: no-repeat;
 }
 
+/* Background image "Proof of donation" sign in pods */
+
 .bgImage {
 	background-image: url(../public/Grupo233.svg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+/* Background radial */
 
 .bgGradient {
 	background: transparent

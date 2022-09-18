@@ -127,9 +127,7 @@ export default function Home() {
 
 	return (
 		<Layout>
-			<h2 className="mb-8 text-5xl font-semibold text-white">
-				Current Prize
-			</h2>
+			<h2 className="title mb-8">Current Prize</h2>
 
 			<BorderWrapper
 				className="mb-60"

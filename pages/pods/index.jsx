@@ -37,9 +37,7 @@ const nfts = () => {
 			</div>
 
 			<div className="mb-36 mt-24">
-				<h2 className="text-4xl font-semibold tracking-tight text-white">
-					Coming soon
-				</h2>
+				<h2 className="title">Coming soon</h2>
 
 				<div className="flex flex-col">
 					<div className="bgCircles mt-10 h-[420px]" />
