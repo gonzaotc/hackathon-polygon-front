@@ -5,10 +5,11 @@ const BorderWrapper = ({
 	outline,
 	position,
 	contraPosition,
+	borderColor,
 }) => {
 	return (
 		<div
-			className={`relative w-full border-[1.5px] border-white ${contraPosition} ${rounded} ${className} `}
+			className={`relative w-full border-[1.5px] bg-black ${borderColor} ${contraPosition} ${rounded} ${className} `}
 		>
 			<div
 				className={`relative overflow-hidden ${position} ${rounded}  h-full w-full ${
