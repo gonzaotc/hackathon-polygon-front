@@ -21,7 +21,7 @@ a {
 
 .bgCircles {
 	background-image: url(../public/Grupo1997.png);
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -30,7 +30,7 @@ a {
 
 .bgImage {
 	background-image: url(../public/Grupo233.svg);
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -49,39 +49,3 @@ a {
 		)
 		0% 0% no-repeat padding-box;
 }
-
-/* .bg-color {
-	background: rgba(38, 40, 87, 1);
-	background: -moz-linear-gradient(
-		top,
-		rgba(38, 40, 87, 1) 0%,
-		rgba(6, 6, 15, 1) 100%
-	);
-	background: -webkit-gradient(
-		left top,
-		left bottom,
-		color-stop(0%, rgba(38, 40, 87, 1)),
-		color-stop(100%, rgba(6, 6, 15, 1))
-	);
-	background: -webkit-linear-gradient(
-		top,
-		rgba(38, 40, 87, 1) 0%,
-		rgba(6, 6, 15, 1) 100%
-	);
-	background: -o-linear-gradient(
-		top,
-		rgba(38, 40, 87, 1) 0%,
-		rgba(6, 6, 15, 1) 100%
-	);
-	background: -ms-linear-gradient(
-		top,
-		rgba(38, 40, 87, 1) 0%,
-		rgba(6, 6, 15, 1) 100%
-	);
-	background: linear-gradient(
-		to bottom,
-		rgba(38, 40, 87, 1) 0%,
-		rgba(6, 6, 15, 1) 100%
-	);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262857', endColorstr='#06060f', GradientType=0 );
-} */

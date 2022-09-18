@@ -6,7 +6,7 @@ import PressableButton from '../../components/Wrappers/PressableButton'
 const nfts = () => {
 	return (
 		<Layout>
-			<div className="bgImage flex h-[20rem] w-full flex-col gap-3 py-8 px-6">
+			<div className="bgImage flex h-[20rem] w-full flex-col gap-3 py-8 px-6 xl:pt-10 2xl:!bg-cover 2xl:!bg-bottom 2xl:!pt-8">
 				<h2 className="text-5xl font-semibold tracking-tighter">
 					Proof of donation
 				</h2>
