@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Timer = ({ time, className, size = 'big' }) => {
+const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
 	return (
 		<div
 			className={`flex w-full items-center justify-center gap-2 ${className}`}
@@ -20,7 +20,9 @@ const Timer = ({ time, className, size = 'big' }) => {
 					} text-2xl`}
 				>
 					<p
-						className={`rounded bg-black/6.25 font-bold text-black ${
+						className={`rounded ${
+							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
+						} font-bold text-black ${
 							size == 'big'
 								? 'py-1.5 px-3'
 								: size == 'small'
@@ -31,7 +33,9 @@ const Timer = ({ time, className, size = 'big' }) => {
 						0
 					</p>
 					<p
-						className={`rounded bg-black/6.25 font-bold text-black ${
+						className={`rounded ${
+							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
+						} font-bold text-black ${
 							size == 'big'
 								? 'py-1.5 px-3'
 								: size == 'small'
@@ -49,12 +53,12 @@ const Timer = ({ time, className, size = 'big' }) => {
 							: size == 'small'
 							? 'text-xs font-semibold'
 							: 'text-sm font-bold'
-					}	 text-black`}
+					}	 ${theme == 'dark' ? 'text-black' : 'text-white/90 mt-1 !font-semibold'} `}
 				>
 					DAY
 				</p>
 			</div>
-			<div className="relative bottom-[0.75rem]">
+			<div className="relative bottom-[0.75rem] text-white">
 				<span>:</span>
 			</div>
 			<div
@@ -72,7 +76,9 @@ const Timer = ({ time, className, size = 'big' }) => {
 					} text-2xl`}
 				>
 					<p
-						className={`rounded bg-black/6.25 font-bold text-black ${
+						className={`rounded ${
+							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
+						} font-bold text-black ${
 							size == 'big'
 								? 'py-1.5 px-3'
 								: size == 'small'
@@ -83,7 +89,9 @@ const Timer = ({ time, className, size = 'big' }) => {
 						1
 					</p>
 					<p
-						className={`rounded bg-black/6.25 font-bold text-black ${
+						className={`rounded ${
+							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
+						} font-bold text-black ${
 							size == 'big'
 								? 'py-1.5 px-3'
 								: size == 'small'
@@ -101,12 +109,12 @@ const Timer = ({ time, className, size = 'big' }) => {
 							: size == 'small'
 							? 'text-xs font-semibold'
 							: 'text-sm font-bold'
-					} text-black`}
+					} ${theme == 'dark' ? 'text-black' : 'text-white/90 mt-1 !font-semibold'} `}
 				>
 					HR
 				</p>
 			</div>
-			<div className="relative bottom-[0.75rem]">
+			<div className="relative bottom-[0.75rem] text-white">
 				<span>:</span>
 			</div>
 			<div
@@ -124,7 +132,9 @@ const Timer = ({ time, className, size = 'big' }) => {
 					} text-2xl`}
 				>
 					<p
-						className={`rounded bg-black/6.25 font-bold text-black ${
+						className={`rounded ${
+							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
+						} font-bold text-black ${
 							size == 'big'
 								? 'py-1.5 px-3'
 								: size == 'small'
@@ -135,7 +145,9 @@ const Timer = ({ time, className, size = 'big' }) => {
 						0
 					</p>
 					<p
-						className={`rounded bg-black/6.25 font-bold text-black ${
+						className={`rounded ${
+							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
+						} font-bold text-black ${
 							size == 'big'
 								? 'py-1.5 px-3'
 								: size == 'small'
@@ -153,12 +165,12 @@ const Timer = ({ time, className, size = 'big' }) => {
 							: size == 'small'
 							? 'text-xs font-semibold'
 							: 'text-sm font-bold'
-					} text-black`}
+					} ${theme == 'dark' ? 'text-black' : 'text-white/90 mt-1 !font-semibold'} `}
 				>
 					MIN
 				</p>
 			</div>
-			<div className="relative bottom-[0.75rem]">
+			<div className="relative bottom-[0.75rem] text-white">
 				<span>:</span>
 			</div>
 			<div
@@ -176,7 +188,9 @@ const Timer = ({ time, className, size = 'big' }) => {
 					} text-2xl`}
 				>
 					<p
-						className={`rounded bg-black/6.25 font-bold text-black ${
+						className={`rounded ${
+							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
+						} font-bold text-black ${
 							size == 'big'
 								? 'py-1.5 px-3'
 								: size == 'small'
@@ -187,7 +201,9 @@ const Timer = ({ time, className, size = 'big' }) => {
 						0
 					</p>
 					<p
-						className={`rounded bg-black/6.25 font-bold text-black ${
+						className={`rounded ${
+							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
+						} font-bold text-black ${
 							size == 'big'
 								? 'py-1.5 px-3'
 								: size == 'small'
@@ -205,7 +221,7 @@ const Timer = ({ time, className, size = 'big' }) => {
 							: size == 'small'
 							? 'text-xs font-semibold'
 							: 'text-sm font-bold'
-					} text-black`}
+					} ${theme == 'dark' ? 'text-black' : 'text-white/90 mt-1 !font-semibold'} `}
 				>
 					SEC
 				</p>

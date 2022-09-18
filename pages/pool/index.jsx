@@ -2,54 +2,108 @@ import React, { useState } from 'react'
 import Layout from '../../components/Layout'
 import Link from 'next/link'
 import Timer from '../../components/Timer'
+import PressableButton from '../../components/Wrappers/PressableButton'
 
 const pool = () => {
 	const [prizeDesc, setPrizeDesc] = useState(true)
+	const [dropdown, setDropwdown] = useState({ open: false, number: null })
+
+	const handleDropdownInteraction = (open, number) => {
+		if (number === dropdown.number){
+			setDropwdown({ false, null})
+		}
+		setDropwdown({ open, number })
+	}
 
 	return (
 		<Layout>
-			<div className="border-2 border-red-500 ">
+			<div className="mb-16">
 				<div className="mb-4 text-white">🏠/ Worldcup final</div>
-				<div className="flex w-full ">
-					<img src={'/poollarge.png'} className="mr-8 h-64" alt="" />
-					<div className="flex flex-col">
-						<h2 className="text-2xl font-medium text-white">
-							{'Experience the world cup in Qatar'}
-						</h2>
-						<p className="text-[#ED652B]">X WEFOREST</p>
-						<hr className="mt-4 w-full" />
-						<ul className="my-6">
-							<li className="text-white">
-								👉 Travel to Qatar and attend the World Cup 2022
-							</li>
-							<li className="text-white">
-								👉 Spend a week at Qatar and have an unique
-								experience
-							</li>
-							<li className="text-white">
-								👉 Be part of the positive global impact by
-								helping We forest
-							</li>
-						</ul>
-						<p className="text-white">
-							Win this once in a life time experience and be part
-							of the world changing!
-						</p>
-						<Link href={'/deposit'}>
-							<button className="mt-4 rounded-md bg-[#ED652B] px-8 py-2 transition-all hover:bg-[#fd692a] hover:shadow-2xl lg:px-16">
-								JOIN POOL
-							</button>
-						</Link>
-						<hr className="divide-gray my-4 divide-y" />
-						<p className="text-xl text-white">
-							This pool ends in:{' '}
-						</p>
-						<div className="my-4 rounded-md bg-white">
-							<Timer />
+				<div className="flex w-full gap-8 border-2 border-red-500">
+					<div className="flex w-1/2 flex-col gap-16 border-2 border-green-500">
+						<div>
+							<img
+								src={'/poollarge.png'}
+								className="w-full"
+								alt=""
+							/>
+						</div>
+
+						<div className="border-2 border-purple-500">
+							<h3 className="mb-8 text-2xl font-semibold text-orange1">
+								Prize Information
+							</h3>
+							<div className="border-2 border-red-500">
+								<div className="flex w-full items-center justify-between text-white border-b-[1px] text-lg border-white pb-2 cursor-pointer" onClick={() => { handleDropdownInteraction(true, 0)}}>
+									<h3>What to expect?</h3>
+									<div className="text-4xl text-white font-thin mr-2">+</div>
+								</div>
+								<div className="flex w-full items-center justify-between text-white border-b-[1px] text-lg border-white pb-2 cursor-pointer" onClick={() => { handleDropdownInteraction(true, 1)}}>
+									<h3>What to expect?</h3>
+									<div className="text-4xl text-white font-thin mr-2">+</div>
+								</div>
+								<div className="flex w-full items-center justify-between text-white border-b-[1px] text-lg border-white pb-2 cursor-pointer" onClick={() => { handleDropdownInteraction(true, 2)}}>
+									<h3>What to expect?</h3>
+									<div className="text-4xl text-white font-thin mr-2">+</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div className="flex w-1/2 flex-col  border-2 border-purple-500">
+						<div className="mb-6 border-b-2 border-white/50 pb-8">
+							<h2 className="mb-1.5 mt-[-0.4rem] text-2xl font-medium text-white">
+								Experience the world cup in Qatar
+							</h2>
+							<p className="font-semibold text-orange1">
+								Helps Weforest
+							</p>
+							<ul className="my-4 ml-4 list-disc">
+								<li className="leading-5 text-white">
+									Travel to Qatar and attend the World Cup
+									2022
+								</li>
+								<li className="leading-5 text-white">
+									Spend a week at Qatar and have an unique
+									experience
+								</li>
+								<li className="leading-5 text-white">
+									Be part of the positive global impact by
+									helping We forest
+								</li>
+							</ul>
+							<p className="mb-4 leading-5 text-white">
+								Win this once in a life time experience and be
+								part of the world changing!
+							</p>
+							<Link href={'/deposit'}>
+								<PressableButton className="h-[2.75rem]">
+									JOIN POOL
+								</PressableButton>
+							</Link>
+						</div>
+
+						<div className="">
+							<p className="mb-4 text-xl text-white">
+								This pool ends in:
+							</p>
+							<Timer theme="light" />
+							<div className="mt-6 flex flex-col gap-2">
+								<div className="h-6/12 flex w-full gap-2">
+									<span className="h-10 w-6/12 rounded-sm bg-red-500"></span>
+									<span className="h-10 w-6/12 rounded-sm bg-blue-500"></span>
+								</div>
+								<div className="h-6/12 flex w-full gap-1">
+									<span className="h-10 w-3/12 rounded-sm bg-purple-500"></span>
+									<span className="h-10 w-3/12 rounded-sm bg-green-500"></span>
+									<span className="h-10 w-3/12 rounded-sm bg-cyan-500"></span>
+									<span className="h-10 w-3/12 rounded-sm bg-orange-500"></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div className="my-8 flex w-40 items-center justify-center gap-6 rounded-2xl bg-white">
+				{/* <div className="my-8 flex w-40 items-center justify-center gap-6 rounded-2xl bg-white">
 					<button
 						className={`flex items-center justify-center rounded-2xl p-3 ${
 							prizeDesc ? 'bg-[#ED652B]' : ''
@@ -66,8 +120,8 @@ const pool = () => {
 					>
 						NGO
 					</button>
-				</div>
-				<div className="flex flex-col">
+				</div> */}
+				{/* <div className="flex flex-col">
 					{prizeDesc ? (
 						<>
 							<h3 className="text-2xl text-[#ED652B]">
@@ -147,7 +201,7 @@ const pool = () => {
 							</p>
 						</>
 					)}
-				</div>
+				</div> */}
 			</div>
 		</Layout>
 	)

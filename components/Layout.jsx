@@ -6,9 +6,9 @@ const Layout = (props) => {
 		<div className="min-w-screen bgGradient min-h-screen">
 			<div className="container mx-auto min-h-screen px-20 2xl:px-10">
 				<Navbar />
-				<main className="mt-12 flex h-full w-full justify-between 2xl:mt-16">
+				<main className=" mt-12 flex h-full w-full justify-between 2xl:mt-16">
 					<SideBar />
-					<div className="w-8/12">{props.children}</div>
+					<div className="w-[72%] 2xl:w-8/12 ">{props.children}</div>
 				</main>
 			</div>
 		</div>
