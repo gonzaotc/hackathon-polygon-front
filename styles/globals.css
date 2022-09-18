@@ -10,6 +10,19 @@ body {
 @tailwind components;
 @tailwind utilities;
 
+.background {
+	background: transparent
+		radial-gradient(
+			closest-side at 94% 103%,
+			#1047e9 0%,
+			#1a337c 26%,
+			#081a4d 57%,
+			#010510 82%,
+			#000000 100%
+		)
+		0% 0% no-repeat padding-box;
+}
+
 .bg-color {
 	background: rgba(38, 40, 87, 1);
 	background: -moz-linear-gradient(

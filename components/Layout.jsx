@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 const Layout = (props) => {
 	return (
-		<div className="container mx-auto min-h-screen px-20 ">
+		<div className="container mx-auto min-h-screen px-20">
 			<Navbar />
 			<main className="mt-16 flex h-full justify-between border-2 border-blue-500">
 				<SideBar />

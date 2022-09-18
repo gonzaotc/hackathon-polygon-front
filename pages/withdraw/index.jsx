@@ -75,19 +75,19 @@ const Withdraw = () => {
 
 	return (
 		<Layout>
-			<div className="flex justify-center items-center gap-8 h-full w-full">
-				<div className="bg-white h-full flex flex-col rounded-md py-12 px-8">
-					<h1 className="text-black text-2xl">Withdraw!</h1>
+			<div className="flex h-full w-full items-center justify-center gap-8">
+				<div className="flex h-full flex-col rounded-md bg-white py-12 px-8">
+					<h1 className="text-2xl text-black">Withdraw!</h1>
 					<p className="text-black">
 						More networks and tokens coming soon!
 					</p>
 					{deposited && (
-						<p className="font-bold mt-2">Max: {deposited}</p>
+						<p className="mt-2 font-bold">Max: {deposited}</p>
 					)}
 					<input
 						type="text"
 						placeholder="Enter Amount!"
-						className="border-2 rounded-lg px-4 py-2 border-black mt-8"
+						className="mt-8 rounded-lg border-2 border-black px-4 py-2"
 						onChange={(e) => setAmount(e.target.value)}
 					/>
 					<p className="pt-8 text-2xl">
@@ -132,7 +132,7 @@ const Withdraw = () => {
 
 					<button
 						onClick={() => withdraw()}
-						className="mt-4 lg:px-16 px-8 py-2 bg-[#ED652B] rounded-md hover:shadow-2xl hover:bg-[#fd692a] transition-all"
+						className="mt-4 rounded-md bg-[#ED652B] px-8 py-2 transition-all hover:bg-[#fd692a] hover:shadow-2xl lg:px-16"
 					>
 						WITHDRAW
 					</button>
