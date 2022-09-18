@@ -1,11 +1,48 @@
-import React from 'react'
+import Link from 'next/link'
+
 import Layout from '../../components/Layout'
 import Card from '../../components/Card'
 
 const nfts = () => {
 	return (
 		<Layout>
-			<div className="mb-12 flex w-full flex-col justify-center gap-8 ">
+			<div className="bgImage flex h-[20rem] w-full flex-col gap-3 py-8 px-6">
+				<h2 className="text-5xl font-semibold tracking-tighter">
+					Proof of donation
+				</h2>
+				<p className="text-xl font-semibold">
+					We love <span className="text-blue1">digital art</span> as
+					much as you do!
+				</p>
+				<p className="front-light mt-2 text-lg">
+					Every time you participate in a pool, you will get to claim
+					your Proof of Donation (aka POD), a collectible NFT that
+					states{' '}
+					<span className="font-bold">
+						when and to whom you have donated money
+					</span>
+				</p>
+
+				<p className="text-lg">
+					Each season has a different guest artist that creates
+					beatiful PODs for you!
+				</p>
+				<div className="font-blue1 mr-10 self-end">
+					<Link href="#">
+						<p className="cursor-pointer text-blue1 underline underline-offset-4">
+							Learn More
+						</p>
+					</Link>
+				</div>
+			</div>
+		</Layout>
+	)
+}
+
+export default nfts
+
+{
+	/* <div className="mb-12 flex w-full flex-col justify-center gap-8 ">
 				<div className="w-full rounded-2xl bg-[#ED652B] bg-gradient-to-r p-8 shadow-2xl">
 					<p className="text-2xl text-white">
 						We created the Proof of Donation NFTs taking the first
@@ -18,19 +55,21 @@ const nfts = () => {
 						and badges from the campaigns you help fund!
 					</p>
 				</div>
-				{/* <div className="shadow-2xl p-2 rounded-2xl w-[60%] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-          <p className="text-white text-2xl flex">
-            You have generated in donations:{" "}
-            <span className="ml-4 text-3xl text-teal-300 font-bold">$1450</span>
-          </p>
-          <hr className="my-4  text-white" />
-          <p className="text-white text-2xl flex">
-            Total donations made with Wooy:{" "}
-            <span className="ml-4 text-3xl text-teal-300 font-bold">
-              $120,000,000
-            </span>
-          </p>
-        </div> */}
+				<div className="w-[60%] rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-2 shadow-2xl">
+					<p className="flex text-2xl text-white">
+						You have generated in donations:{' '}
+						<span className="ml-4 text-3xl font-bold text-teal-300">
+							$1450
+						</span>
+					</p>
+					<hr className="my-4  text-white" />
+					<p className="flex text-2xl text-white">
+						Total donations made with Wooy:{' '}
+						<span className="ml-4 text-3xl font-bold text-teal-300">
+							$120,000,000
+						</span>
+					</p>
+				</div>
 				<div className="grid grid-cols-3 gap-7">
 					<Card
 						image="/donation1.png"
@@ -66,9 +105,5 @@ const nfts = () => {
 						path="nfts/3"
 					/>
 				</div>
-			</div>
-		</Layout>
-	)
+			</div> */
 }
-
-export default nfts

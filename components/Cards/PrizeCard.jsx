@@ -16,11 +16,11 @@ const SwipeableImages = ({ images }) => {
 		// 	>
 		// 		{images.map((image, index) => (
 		// 			<SwiperSlide key={index} className="h-full w-full ">
-						<img
-							src={images[0]}
-							alt="prize image"
-							className="h-full w-full object-cover"
-						/>
+		<img
+			src={images[0]}
+			alt="prize image"
+			className="h-full w-full object-cover"
+		/>
 		// 			</SwiperSlide>
 		// 		))}
 		// 	</Swiper>

@@ -1,4 +1,3 @@
-import React from 'react'
 import SideBar from './SideBar'
 import Navbar from './Navbar'
 
@@ -8,9 +7,7 @@ const Layout = (props) => {
 			<Navbar />
 			<main className="mt-12 flex h-full justify-between gap-[11vw] 2xl:mt-16 ">
 				<SideBar />
-				<div className="w-full">
-					{props.children}
-				</div>
+				<div className="w-full">{props.children}</div>
 			</main>
 		</div>
 	)
