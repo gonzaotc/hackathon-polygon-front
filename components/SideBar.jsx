@@ -70,13 +70,14 @@ const SideBar = () => {
 							<a
 								href="https://discord.com/"
 								target="_blank"
-								// noreferrer
+								rel="noreferrer"
 								className="flex h-[55px] w-[55px] items-center justify-center bg-white"
 							>
 								<Image
 									src="/discord.png"
 									width={23}
 									height={23}
+									alt="discord icon"
 								/>
 							</a>
 						</BorderWrapper>
@@ -89,13 +90,14 @@ const SideBar = () => {
 							<a
 								href="https://medium.com/"
 								target="_blank"
-								// noreferrer
+								rel="noreferrer"
 								className="flex h-[55px] w-[55px] items-center justify-center bg-white"
 							>
 								<Image
 									src="/medium.png"
 									width={23}
 									height={23}
+									alt="medium icon"
 								/>
 							</a>
 						</BorderWrapper>
@@ -108,13 +110,14 @@ const SideBar = () => {
 							<a
 								href="https://twitter.com/"
 								target="_blank"
-								// noreferrer
+								rel="noreferrer"
 								className="flex h-[55px] w-[55px] items-center justify-center bg-white"
 							>
 								<Image
 									src="/twitter.png"
 									width={23}
 									height={23}
+									alt="twitter icon"
 								/>
 							</a>
 						</BorderWrapper>

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import Layout from '../../components/Layout'
-import Card from '../../components/Card'
+import PressableButton from '../../components/Wrappers/PressableButton'
 
 const nfts = () => {
 	return (
@@ -30,9 +30,25 @@ const nfts = () => {
 				<div className="font-blue1 mr-10 self-end">
 					<Link href="#">
 						<p className="cursor-pointer text-blue1 underline underline-offset-4">
-							Learn More
+							Learn more
 						</p>
 					</Link>
+				</div>
+			</div>
+
+			<div className="mb-36 mt-24">
+				<h2 className="text-4xl font-semibold tracking-tight text-white">
+					Coming soon
+				</h2>
+
+				<div className="flex flex-col">
+					<div className="bgCircles mt-10 h-[420px]" />
+					<PressableButton
+						color="blue"
+						className="mt-20 w-[40%] self-center"
+					>
+						ARTIST IFANA
+					</PressableButton>
 				</div>
 			</div>
 		</Layout>

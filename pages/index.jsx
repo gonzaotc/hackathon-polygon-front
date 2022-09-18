@@ -136,6 +136,7 @@ export default function Home() {
 				rounded="rounded-xl"
 				position="bottom-1.75 right-1.75"
 				contraPosition="top-1.75 left-1.75"
+				borderColor="border-white"
 			>
 				<PrizeCard prizeData={prizeData} />
 			</BorderWrapper>

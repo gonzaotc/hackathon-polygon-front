@@ -13,6 +13,13 @@ a {
 @tailwind components;
 @tailwind utilities;
 
+.bgCircles {
+	background-image: url(../public/Grupo1997.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 .bgImage {
 	background-image: url(../public/Grupo233.svg);
 	background-size: cover;
@@ -20,7 +27,20 @@ a {
 	background-repeat: no-repeat;
 }
 
-.bg-color {
+.bgGradient {
+	background: transparent
+		radial-gradient(
+			ellipse at 100% 100%,
+			#1047e9 0%,
+			#1a337c 26%,
+			#081a4d 57%,
+			#010510 82%,
+			#000000 100%
+		)
+		0% 0% no-repeat padding-box;
+}
+
+/* .bg-color {
 	background: rgba(38, 40, 87, 1);
 	background: -moz-linear-gradient(
 		top,
@@ -54,4 +74,4 @@ a {
 		rgba(6, 6, 15, 1) 100%
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262857', endColorstr='#06060f', GradientType=0 );
-}
+} */
