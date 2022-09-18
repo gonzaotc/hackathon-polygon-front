@@ -220,7 +220,7 @@ const Index = () => {
 								<input
 									type="checkbox"
 									id="checkbox"
-									className="accent-black relative mt-[0.2rem] w-[0.95rem] h-[0.95rem] invert"
+									className="relative mt-[0.25rem] h-[0.95rem] w-[0.95rem] accent-black invert"
 								/>
 								<p className="text-white/70">
 									Join our mailing list to receive news on
@@ -230,7 +230,7 @@ const Index = () => {
 
 							<PressableButton
 								color="blue"
-								className="h-fit w-[40%] self-end"
+								className="h-fit w-[30%] self-end"
 								padding="py-2 px-7"
 							>
 								<p className="font-semibold text-white">SAVE</p>
