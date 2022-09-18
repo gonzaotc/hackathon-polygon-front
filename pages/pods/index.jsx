@@ -43,7 +43,7 @@ const nfts = () => {
 					<div className="bgCircles mt-10 h-[420px]" />
 					<PressableButton
 						color="blue"
-						className="mt-20 w-[40%] self-center"
+						className="mt-20 w-[40%] self-center text-white"
 					>
 						ARTIST IFANA
 					</PressableButton>

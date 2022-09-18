@@ -7,6 +7,7 @@ const PressableButton = ({
 	disabled = false,
 	onClick,
 	padding = 'px-8 py-2',
+	rounded = 'rounded-md',
 }) => {
 	let colorClass
 	switch (color) {
@@ -29,12 +30,12 @@ const PressableButton = ({
 	}
 	return (
 		<button
-			className={`relative top-[3px] left-[3px] h-full w-full rounded-md bg-black ${className} `}
+			className={`relative top-[3px] left-[3px] h-full w-full ${rounded} bg-black ${className} `}
 			disabled={disabled ? true : false}
 			onClick={onClick}
 		>
 			<div
-				className={`relative bottom-[3px] right-[3px] h-full w-full rounded-md border-2 border-black ${colorClass} ${padding} font-semibold shadow-lg transition-all hover:bottom-0 hover:right-0  hover:shadow-none`}
+				className={`relative bottom-[3px] right-[3px] h-full w-full ${rounded} border-2 border-black ${colorClass} ${padding} font-semibold shadow-lg transition-all hover:bottom-0 hover:right-0  hover:shadow-none`}
 			>
 				{children}
 			</div>
