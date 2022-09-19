@@ -80,3 +80,19 @@ input[type='number'] {
 	width: 100%;
 	@apply tracking-tight;
 }
+
+.swiperPrizeCard.swiper {
+	@apply relative;
+}
+
+.swiperPrizeCard.swiper .swiper-pagination {
+	@apply absolute bottom-0 z-10 flex h-10 w-full items-center justify-center;
+}
+
+.swiperPrizeCard.swiper .swiper-pagination .swiper-pagination-bullet {
+	@apply mx-2 h-2 w-2 rounded-full bg-white/50;
+}
+
+.swiperPrizeCard.swiper .swiper-pagination .swiper-pagination-bullet-active {
+	@apply bg-white;
+}

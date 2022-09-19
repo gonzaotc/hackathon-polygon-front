@@ -125,7 +125,7 @@ export default function Home() {
 	const prizeData = {
 		name: 'Experience the World Cup in Qatar',
 		company: 'Helps Weforest',
-		images: ['pool1.png', 'pool2.png', 'pool1.png', 'pool1.png'],
+		images: ['fifa-player.jpeg', 'fifa-player.jpeg', 'fifa-player.jpeg'],
 	}
 
 	const comingData = [
@@ -186,10 +186,6 @@ export default function Home() {
 						slidesPerView="auto"
 						navigation
 						freeMode={true}
-						// loop={true}
-						// loopedSlides={3}
-						// pagination={{ clickable: true }}
-						// scrollbar={{ draggable: true }}
 					>
 						{comingData.map((event, index) => {
 							return (
@@ -202,12 +198,12 @@ export default function Home() {
 							)
 						})}
 					</Swiper>
-					<span className="absolute top-[50%] left-[-4rem] translate-y-[-50%] text-5xl font-bold text-white">
-						I
-					</span>
-					<span className="absolute top-[50%] right-[-4rem] translate-y-[-50%] text-5xl font-bold text-white">
-						D
-					</span>
+					<div className="absolute top-[50%] left-[-3.5rem] h-[3.2rem]  w-[3.2rem] translate-y-[-50%] font-bold text-white">
+						<img src="arrow-left.png" alt="" />
+					</div>
+					<div className="absolute top-[50%] right-[-3.5rem] h-[3.2rem]  w-[3.2rem] translate-y-[-50%]  font-bold text-white">
+						<img src="arrow-right.png" alt="" />
+					</div>
 				</>
 			</div>
 
