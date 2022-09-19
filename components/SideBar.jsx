@@ -1,16 +1,18 @@
-import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+
+import BorderWrapper from './Wrappers/BorderWrapper'
 
 //---icons
 import WavesIcon from '@mui/icons-material/Waves'
 import ColorLensIcon from '@mui/icons-material/ColorLens'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
-import { useRouter } from 'next/router'
-import BorderWrapper from './Wrappers/BorderWrapper'
-import Image from 'next/image'
 
 const SideBar = () => {
 	const router = useRouter()
+	const [emailModalIsOpen, setEmailModalIsOpen] = useState(false)
 
 	return (
 		<div className="flex min-w-[14rem]">
@@ -51,8 +53,43 @@ const SideBar = () => {
 						</div>
 					</Link>
 				</div>
-				<div className="hover:img:rotate-0 flex flex-col items-start gap-6  text-white">
-					<button className="flex items-center gap-2 hover-child-image:rotate-0">
+				<div className="flex flex-col items-start text-white">
+					<div className="flex w-full flex-col items-start justify-center gap-0.5 border-white text-sm text-white/80  2xl:text-lg">
+						<button className="flex flex-row gap-1 hover:text-white">
+							<Image
+								width={20}
+								height={20}
+								alt="telegram icon"
+								src="/telegramIcon.svg"
+							/>
+							<p>Telegram support</p>
+						</button>
+						<button
+							onClick={() => {
+								setEmailModalIsOpen(true)
+							}}
+							className="flex flex-row gap-1 hover:text-white"
+						>
+							<Image
+								width={20}
+								height={20}
+								alt="mail icon"
+								src="/mail.png"
+							/>
+							<p>Email support</p>
+						</button>
+						<button className="flex flex-row gap-1 hover:text-white">
+							<Image
+								width={20}
+								height={20}
+								alt="question icon"
+								src="/questionIcon.png"
+							/>
+							<p>FAQ</p>
+						</button>
+					</div>
+
+					<button className="mt-0.5 mb-3 flex items-center gap-2 hover-child-image:rotate-0">
 						<img
 							className="h-4 w-4 rotate-180 object-contain transition-all duration-300 "
 							src="arrow.png"
@@ -60,6 +97,7 @@ const SideBar = () => {
 						/>
 						<p className="text-2xl">Help</p>
 					</button>
+
 					<div className="flex w-full justify-between gap-5">
 						<BorderWrapper
 							className="text-2xl font-bold text-black"
