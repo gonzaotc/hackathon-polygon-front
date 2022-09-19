@@ -1,19 +1,37 @@
 import React, { useState } from 'react'
-import Layout from '../../components/Layout'
+
+import Image from 'next/image'
 import Link from 'next/link'
+
+import Layout from '../../components/Layout'
 import Timer from '../../components/Timer'
 import PressableButton from '../../components/Wrappers/PressableButton'
 import ComboPrize from '../../components/DropdownCombos/ComboPrize'
 import ComboNGO from '../../components/DropdownCombos/ComboNGO'
 import ComboLegal from '../../components/DropdownCombos/ComboLegal'
 
-const pool = () => {
+const Index = () => {
 	const [prizeDesc, setPrizeDesc] = useState(true)
 
 	return (
 		<Layout>
 			<div className="mb-40">
-				<div className="mb-4 text-white">🏠/ Worldcup final</div>
+				<div className="mb-4 flex flex-row text-white/80">
+					<span className="mr-1.5 flex items-center">
+						<Link href="/">
+							<Image
+								width="18"
+								height="18"
+								alt="homeIcon"
+								src="/iconWhite-home.svg"
+							/>
+						</Link>
+					</span>
+					/
+					<span className="mx-1.5 flex items-center">
+						<Link href="/pool">Worldcup final</Link>
+					</span>
+				</div>
 				<div className="flex w-full gap-8 ">
 					<div className="flex w-1/2 flex-col gap-16 ">
 						<div>
@@ -87,4 +105,4 @@ const pool = () => {
 	)
 }
 
-export default pool
+export default Index

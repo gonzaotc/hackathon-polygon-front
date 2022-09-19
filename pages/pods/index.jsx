@@ -120,7 +120,6 @@ const Index = () => {
 						>
 							ARTIST IFANA
 						</PressableButton>
-						>
 					</div>
 				</div>
 			</Layout>
