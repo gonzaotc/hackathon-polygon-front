@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { useRouter } from 'next/router'
 
+import { SidebarContext } from '../context/sidebarContext'
 import BorderWrapper from './Wrappers/BorderWrapper'
 
 //---icons
@@ -57,7 +58,7 @@ const SideBar = () => {
 				<div className="flex flex-col items-start text-white">
 					{helpTooltipOpen && (
 						<>
-							<div className="flex w-full flex-col items-start justify-center gap-0.5 border-2 border-white text-sm text-white/80  2xl:text-lg">
+							<div className="flex w-full flex-col items-start justify-center gap-0.5 text-sm text-white/80  2xl:text-lg">
 								<button className="flex flex-row gap-1 hover:text-white">
 									<Image
 										width={20}

@@ -26,12 +26,12 @@ const pools = [
 ]
 
 const badges = [
-	{ image: '/pool1.png', data: {} },
-	{ image: '/pool1.png', data: {} },
-	{ image: '/pool1.png', data: {} },
-	{ image: '/pool1.png', data: {} },
-	{ image: '/pool1.png', data: {} },
-	{ image: '/pool1.png', data: {} },
+	{ image: '/nft1.png', data: {} },
+	{ image: '/nft2.png', data: {} },
+	{ image: '/nft3.png', data: {} },
+	{ image: '/nft4.png', data: {} },
+	{ image: '/nft5.png', data: {} },
+	{ image: '/nft6.png', data: {} },
 ]
 
 const buttons = [
@@ -457,12 +457,12 @@ const Index = () => {
 								My collection
 							</h3>
 
-							<div className="grid grid-cols-4 gap-10">
+							<div className="grid grid-cols-4 gap-10 border-2 border-red-500">
 								{badges.map((badge, index) => {
 									return (
 										<div
 											key={index}
-											className="rounded-full"
+											className=" border-2 border-blue-500"
 										>
 											<button
 												onClick={() => {
@@ -471,7 +471,7 @@ const Index = () => {
 											>
 												<img
 													src={badge.image}
-													className="rounded-full border-[2px] border-white bg-cover bg-center bg-no-repeat"
+													className="h-full w-full rounded-full border-[2px] object-cover"
 													alt="badge photo"
 												/>
 											</button>
