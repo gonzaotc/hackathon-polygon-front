@@ -47,6 +47,7 @@ const Index = () => {
 	const [confirmationModalIsOpen, setConfirmationModalIsOpen] =
 		useState(false)
 	const [withdrawModalIsOpen, setWithdrawModalIsOpen] = useState(false)
+	const [podModalIsOpen, setPodModalIsOpen] = useState(false)
 	const [selectedValue, setSelectedValue] = useState('0%')
 
 	const router = useRouter()
@@ -251,6 +252,90 @@ const Index = () => {
 				</ModalWrapper>
 			)}
 
+			{podModalIsOpen && (
+				<ModalWrapper>
+					<div className="relative flex h-[38rem] w-[35rem] flex-col items-center text-black">
+						<div className="flex items-center self-end">
+							<button
+								className="z-40 mt-4 mr-8 self-end text-xl text-gray-400 hover:text-gray-700"
+								onClick={() => {
+									setPodModalIsOpen(false)
+								}}
+							>
+								X
+							</button>
+						</div>
+
+						<div className="flex w-fit items-center justify-center rounded-full border-[3px] border-black">
+							<Image
+								width="150"
+								height="150"
+								className="rounded-full object-cover object-center"
+								src="/pool1.png"
+								alt="pool photo"
+							/>
+						</div>
+
+						<div className="flex w-[91%] flex-col items-center justify-center">
+							<h2 className="mt-4 text-center text-3xl font-bold tracking-tight">
+								Viví un recital único con Javier Calamaro
+							</h2>
+							<p className="my-2 font-semibold text-blue1">
+								#5113940
+							</p>
+
+							<p className="w-[91%] text-center font-semibold tracking-tight">
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Blanditiis, dolor. Sapiente
+								iusto quod Blanditiis, dolor. Sapiente iusto
+								quod adipisicing elit. Blanditiis, dolor.
+							</p>
+
+							<div className="mt-3 flex w-[91%] flex-col items-center gap-1 tracking-tight">
+								<p className="text-xs">
+									<span className="font-semibold">
+										From address:{' '}
+									</span>
+									0x3df2641419c38c27756ed458f1347ce85fe715ca9363ba8c0b18506834a49495
+								</p>
+								<p className="text-xs">
+									<span className="font-semibold">
+										To address:{' '}
+									</span>
+									0xbb361a591a20bd7be13a48fc4ba3f7260cbff00f
+								</p>
+							</div>
+
+							<div className="my-4 w-[91%] border-t-[2px] border-black" />
+
+							<div className="flex w-[91%] flex-row items-center justify-start  py-1">
+								<Image
+									width={15}
+									height={15}
+									alt="calendar icon"
+									src={'/calendarIcon.png'}
+								/>
+								<p className="ml-1 text-sm font-semibold tracking-tight text-blue1">
+									01 july 2022
+								</p>
+							</div>
+
+							<PressableButton
+								onClick={() => {
+									setPodModalIsOpen(false)
+								}}
+								color="blue"
+								className="mt-5 w-[75%]"
+							>
+								<p className="tracking-tight text-white">
+									SHARE POD IMAGE
+								</p>
+							</PressableButton>
+						</div>
+					</div>
+				</ModalWrapper>
+			)}
+
 			<Layout>
 				<div className="mb-20 flex min-h-full flex-col text-white">
 					<h2 className="title">My account</h2>
@@ -379,11 +464,17 @@ const Index = () => {
 											key={index}
 											className="rounded-full"
 										>
-											<img
-												src={badge.image}
-												className="rounded-full border-[2px] border-white bg-cover bg-center bg-no-repeat"
-												alt="badge photo"
-											/>
+											<button
+												onClick={() => {
+													setPodModalIsOpen(true)
+												}}
+											>
+												<img
+													src={badge.image}
+													className="rounded-full border-[2px] border-white bg-cover bg-center bg-no-repeat"
+													alt="badge photo"
+												/>
+											</button>
 										</div>
 									)
 								})}
