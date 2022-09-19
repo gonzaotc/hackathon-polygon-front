@@ -1,5 +1,4 @@
 import '@rainbow-me/rainbowkit/styles.css'
-import '../styles/globals.css'
 
 import {
 	darkTheme,
@@ -26,6 +25,14 @@ const wagmiClient = createClient({
 	provider,
 })
 
+import '../styles/globals.css'
+import Link from 'next/link'
+
+import { SidebarContextProvider } from '../context/sidebarContext'
+
+import PressableButton from '../components/Wrappers/PressableButton'
+import ModalWrapper from '../components/Wrappers/ModalWrapper'
+
 function MyApp({ Component, pageProps }) {
 	return (
 		<WagmiConfig client={wagmiClient}>
@@ -34,7 +41,9 @@ function MyApp({ Component, pageProps }) {
 				chains={chains}
 				theme={darkTheme()}
 			>
-				<Component {...pageProps} />
+				<SidebarContextProvider>
+					<Component {...pageProps} />
+				</SidebarContextProvider>
 			</RainbowKitProvider>
 		</WagmiConfig>
 	)
