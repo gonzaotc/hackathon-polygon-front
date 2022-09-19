@@ -34,11 +34,20 @@ const badges = [
 	{ image: '/pool1.png', data: {} },
 ]
 
+const buttons = [
+	{ value: '0%' },
+	{ value: '25%' },
+	{ value: '50%' },
+	{ value: '75%' },
+	{ value: '100%' },
+]
+
 const Index = () => {
 	const [showType, setShowType] = useState('pools')
 	const [confirmationModalIsOpen, setConfirmationModalIsOpen] =
 		useState(false)
 	const [withdrawModalIsOpen, setWithdrawModalIsOpen] = useState(false)
+	const [selectedValue, setSelectedValue] = useState('0%')
 
 	const router = useRouter()
 
@@ -51,6 +60,13 @@ const Index = () => {
 		console.log(event.target.name.value)
 		console.log(event.target.email.value)
 		console.log(event.target.checkbox.checked)
+	}
+
+	const withdrawHandler = () => {
+		setSelectedValue('0%')
+		setWithdrawModalIsOpen(false)
+
+		// DO SOMETHING
 	}
 
 	return (
@@ -121,11 +137,12 @@ const Index = () => {
 
 			{withdrawModalIsOpen && (
 				<ModalWrapper>
-					<div className="relative flex h-[35rem] w-[40rem] flex-col items-center text-black">
+					<div className="relative flex h-[38rem] w-[40rem] flex-col items-center text-black">
 						<div className="flex items-center self-end">
 							<button
-								className="z-40 mt-4 mr-8 self-end text-xl text-gray-400 hover:text-gray-700"
+								className="z-40 mt-3 mr-8 self-end text-xl text-gray-400 hover:text-gray-700"
 								onClick={() => {
+									setSelectedValue('0%')
 									setWithdrawModalIsOpen(false)
 								}}
 							>
@@ -133,7 +150,7 @@ const Index = () => {
 							</button>
 						</div>
 
-						<div className="flex h-full w-full flex-col px-12 py-2">
+						<div className="flex h-full w-full flex-col px-12 py-0">
 							<h2 className="text-xl font-bold tracking-tight">
 								Withdraw
 							</h2>
@@ -145,7 +162,7 @@ const Index = () => {
 							</p>
 
 							<BorderWrapper
-								className="mt-6 rounded-xl"
+								className="mt-4 rounded-xl"
 								rounded="rounded-xl"
 								position="bottom-1.25 right-1.25"
 								contraPosition="top-1.25 left-1.25"
@@ -160,7 +177,7 @@ const Index = () => {
 									<div className="flex w-full flex-row items-center">
 										<input
 											type="number"
-											className="w-[90%] rounded-lg py-1 "
+											className="w-[90%] rounded-lg py-1 px-2 text-black"
 										/>
 										<p className="w-[10%] pl-6 text-center">
 											DAI
@@ -168,6 +185,67 @@ const Index = () => {
 									</div>
 								</div>
 							</BorderWrapper>
+
+							<h2 className="mt-4 text-lg font-bold tracking-tight">
+								Feeling generous? Donate more!
+							</h2>
+							<p className="mt-1 font-semibold tracking-tight">
+								If you prefer, you can donate a percentage or
+								the full amount you&apos;ll withdraw to the NGO
+								that benefits from our current active pool
+							</p>
+
+							<div className="mt-5 flex flex-row items-center justify-center gap-3">
+								{buttons.map((button, index) => {
+									return (
+										<PressableButton
+											key={index}
+											color={'blue'}
+											className="w-auto"
+											onClick={() => {
+												setSelectedValue(button.value)
+											}}
+										>
+											<p className="text-center tracking-tight text-white">
+												{button.value}
+											</p>
+										</PressableButton>
+									)
+								})}
+							</div>
+
+							<BorderWrapper
+								className="mt-4 rounded-xl"
+								rounded="rounded-xl"
+								position="bottom-1.25 right-1.25"
+								contraPosition="top-1.25 left-1.25"
+								outline="outline outline-[3px] outline-black"
+								borderColor="border-black"
+							>
+								<div className="flex flex-col gap-3 bg-blue1 px-8 py-2 tracking-tight text-white/80">
+									<p>Donation percentage</p>
+
+									<div className="flex w-full flex-row items-center">
+										<input
+											type="text"
+											className="w-[90%] rounded-lg bg-blue2 py-1 px-2 text-white"
+											value={selectedValue}
+											defaultValue={selectedValue}
+											disabled
+										/>
+									</div>
+								</div>
+							</BorderWrapper>
+							<PressableButton
+								color="blue"
+								className="mt-6 h-fit w-[45%]"
+								padding="py-1.5 px-4"
+								onClick={withdrawHandler}
+							>
+								<p className="tracking-tight text-white">
+									Withdraw
+								</p>
+							</PressableButton>
 						</div>
 					</div>
 				</ModalWrapper>
