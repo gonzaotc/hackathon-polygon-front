@@ -417,7 +417,7 @@ const Index = () => {
 								<h3 className="mb-2 text-lg font-semibold">
 									ACCOUNT OVERVIEW
 								</h3>
-								<div className="rounded-2xl bg-blue1 p-10">
+								<div className="rounded-2xl bg-blue1 p-8 pb-10">
 									<p className="mb-1 text-xl font-semibold tracking-tight">
 										DEPOSITS
 									</p>

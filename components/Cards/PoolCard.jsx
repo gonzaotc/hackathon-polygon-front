@@ -16,7 +16,7 @@ const PoolCard = ({ title, photo, isActive, enddate, isWinner, openModal }) => {
 				/>
 			</div>
 
-			<div className="flex w-full flex-row items-center justify-between rounded-2xl bg-white p-5">
+			<div className="flex w-full flex-row items-center justify-between rounded-2xl bg-white py-3.5 px-8">
 				{isActive ? (
 					<div className="flex w-[63%] flex-col gap-4 self-start ">
 						<div className="border-b-[1.5px] border-black pb-2">
@@ -28,8 +28,8 @@ const PoolCard = ({ title, photo, isActive, enddate, isWinner, openModal }) => {
 							</h2>
 						</div>
 
-						<div className="">
-							<Timer size="small" className="w-full text-black" />
+						<div className=" flex">
+							<Timer size="small" className="w-auto text-black" />
 						</div>
 					</div>
 				) : (

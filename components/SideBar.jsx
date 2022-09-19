@@ -13,6 +13,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 const SideBar = () => {
 	const router = useRouter()
 	const [emailModalIsOpen, setEmailModalIsOpen] = useState(false)
+	const [helpTooltipOpen, setHelpTooltipOpen] = useState(false)
 
 	return (
 		<div className="flex min-w-[14rem]">
@@ -54,44 +55,55 @@ const SideBar = () => {
 					</Link>
 				</div>
 				<div className="flex flex-col items-start text-white">
-					<div className="flex w-full flex-col items-start justify-center gap-0.5 border-white text-sm text-white/80  2xl:text-lg">
-						<button className="flex flex-row gap-1 hover:text-white">
-							<Image
-								width={20}
-								height={20}
-								alt="telegram icon"
-								src="/telegramIcon.svg"
-							/>
-							<p>Telegram support</p>
-						</button>
-						<button
-							onClick={() => {
-								setEmailModalIsOpen(true)
-							}}
-							className="flex flex-row gap-1 hover:text-white"
-						>
-							<Image
-								width={20}
-								height={20}
-								alt="mail icon"
-								src="/mail.png"
-							/>
-							<p>Email support</p>
-						</button>
-						<button className="flex flex-row gap-1 hover:text-white">
-							<Image
-								width={20}
-								height={20}
-								alt="question icon"
-								src="/questionIcon.png"
-							/>
-							<p>FAQ</p>
-						</button>
-					</div>
+					{helpTooltipOpen && (
+						<>
+							<div className="flex w-full flex-col items-start justify-center gap-0.5 border-2 border-white text-sm text-white/80  2xl:text-lg">
+								<button className="flex flex-row gap-1 hover:text-white">
+									<Image
+										width={20}
+										height={20}
+										alt="telegram icon"
+										src="/telegramIcon.svg"
+									/>
+									<p>Telegram support</p>
+								</button>
+								<button
+									onClick={() => {
+										setEmailModalIsOpen(true)
+									}}
+									className="flex flex-row gap-1 hover:text-white"
+								>
+									<Image
+										width={20}
+										height={20}
+										alt="mail icon"
+										src="/mail.png"
+									/>
+									<p>Email support</p>
+								</button>
+								<button className="flex flex-row gap-1 hover:text-white">
+									<Image
+										width={20}
+										height={20}
+										alt="question icon"
+										src="/questionIcon.png"
+									/>
+									<p>FAQ</p>
+								</button>
+							</div>
+						</>
+					)}
 
-					<button className="mt-0.5 mb-3 flex items-center gap-2 hover-child-image:rotate-0">
+					<button
+						className={`mt-0.5 mb-3 flex items-center gap-2 ${
+							helpTooltipOpen ? 'child-image:rotate-[180]' : ''
+						}`}
+						onClick={() => {
+							setHelpTooltipOpen((prevState) => !prevState)
+						}}
+					>
 						<img
-							className="h-4 w-4 rotate-180 object-contain transition-all duration-300 "
+							className="relative top-[0.1rem] h-3 w-3 rotate-180 object-contain transition-all duration-300 "
 							src="arrow.png"
 							alt="arrow icon"
 						/>

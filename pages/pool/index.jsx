@@ -9,9 +9,21 @@ import PressableButton from '../../components/Wrappers/PressableButton'
 import ComboPrize from '../../components/DropdownCombos/ComboPrize'
 import ComboNGO from '../../components/DropdownCombos/ComboNGO'
 import ComboLegal from '../../components/DropdownCombos/ComboLegal'
+import DropdownCombo from '../../components/DropdownCombos/DropdownCombo'
+import dropdownsData from '../../components/DropdownCombos/dropdownsData'
 
 const Index = () => {
-	const [prizeDesc, setPrizeDesc] = useState(true)
+	const prizeData = {
+		name: 'Worldcup final',
+		title: 'Experience the world cup in Qatar',
+		company: 'Weforest',
+		features: [
+			'Travel to Qatar and attend the World Cup 2022',
+			'Spend a week at Qatar and have an unique experience',
+			'Be part of the positive global impact by helping We forest',
+		],
+		slogan: 'Win this once in a life time experience and be part of the world changing!',
+	}
 
 	return (
 		<Layout>
@@ -29,7 +41,7 @@ const Index = () => {
 					</span>
 					/
 					<span className="mx-1.5 flex items-center">
-						<Link href="/pool">Worldcup final</Link>
+						<Link href="/pool">{prizeData.name}</Link>
 					</span>
 				</div>
 				<div className="flex w-full gap-8 ">
@@ -41,37 +53,35 @@ const Index = () => {
 								alt=""
 							/>
 						</div>
-
-						<ComboPrize />
-						<ComboNGO />
-						<ComboLegal />
+						{dropdownsData.map((item, index) => (
+							<DropdownCombo
+								title={item.title}
+								items={item.items}
+								key={index}
+							/>
+						))}
 					</div>
 
 					<div className="flex w-1/2 flex-col  ">
-						<div className="mb-6 border-b-2 border-white/50 pb-8">
+						<div className="mb-8 border-b-2 border-white/50 pb-8">
 							<h2 className="mb-1.5 mt-[-0.4rem] text-2xl font-medium text-white">
-								Experience the world cup in Qatar
+								{prizeData.title}
 							</h2>
 							<p className="font-semibold text-orange1">
-								Helps Weforest
+								Helps {prizeData.company}
 							</p>
 							<ul className="my-4 ml-4 list-disc">
-								<li className="leading-5 text-white">
-									Travel to Qatar and attend the World Cup
-									2022
-								</li>
-								<li className="leading-5 text-white">
-									Spend a week at Qatar and have an unique
-									experience
-								</li>
-								<li className="leading-5 text-white">
-									Be part of the positive global impact by
-									helping We forest
-								</li>
+								{prizeData.features.map((item, index) => (
+									<li
+										className="leading-5 text-white"
+										key={index}
+									>
+										{item}
+									</li>
+								))}
 							</ul>
 							<p className="mb-4 leading-5 text-white">
-								Win this once in a life time experience and be
-								part of the world changing!
+								{prizeData.slogan}
 							</p>
 							<Link href={'/deposit'}>
 								<PressableButton className="h-[2.75rem]">
@@ -80,21 +90,24 @@ const Index = () => {
 							</Link>
 						</div>
 
-						<div className="">
-							<p className="mb-4 text-xl text-white">
+						<div className="mb-8">
+							<p className="mb-6 text-xl text-white">
 								This pool ends in:
 							</p>
 							<Timer theme="light" />
-							<div className="mt-6 flex flex-col gap-2">
-								<div className="h-6/12 flex w-full gap-2">
-									<span className="h-10 w-6/12 rounded-sm bg-red-500"></span>
-									<span className="h-10 w-6/12 rounded-sm bg-blue-500"></span>
+						</div>
+
+						<div className="">
+							<div className="flex h-24 flex-col gap-2 ">
+								<div className="flex h-1/2 w-full gap-2">
+									<span className="h-full w-6/12 rounded-sm bg-red-500"></span>
+									<span className="h-full w-6/12 rounded-sm bg-blue-100"></span>
 								</div>
-								<div className="h-6/12 flex w-full gap-1">
-									<span className="h-10 w-3/12 rounded-sm bg-purple-500"></span>
-									<span className="h-10 w-3/12 rounded-sm bg-green-500"></span>
-									<span className="h-10 w-3/12 rounded-sm bg-cyan-500"></span>
-									<span className="h-10 w-3/12 rounded-sm bg-orange-500"></span>
+								<div className="flex h-1/2 w-full gap-1">
+									<span className="h-full w-3/12 rounded-sm bg-green-500"></span>
+									<span className="h-full w-3/12 rounded-sm bg-purple-700"></span>
+									<span className="h-full w-3/12 rounded-sm bg-cyan-300"></span>
+									<span className="h-full w-3/12 rounded-sm bg-neutral-900"></span>
 								</div>
 							</div>
 						</div>

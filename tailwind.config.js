@@ -51,6 +51,7 @@ module.exports = {
 		function ({ addVariant }) {
 			addVariant('child', '& > *')
 			addVariant('child-hover', '& > *:hover')
+			addVariant('child-image', '& > img')
 			addVariant('hover-child-image', '&:hover > img')
 		},
 		require('tailwind-scrollbar-hide'),

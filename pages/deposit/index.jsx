@@ -253,7 +253,11 @@ const Deposit = () => {
 									<p className="font-bold tracking-tight text-black">
 										CONTINUE
 									</p>
-								</PressableButton>
+									</PressableButton>
+									
+									<p className="font-semibold">
+										You'll need to approve this transaction on your wallet first.
+									</p>
 							</>
 						)}
 					</div>
