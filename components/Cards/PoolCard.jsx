@@ -1,7 +1,11 @@
+import { useRouter } from 'next/router'
+
 import Timer from '../Timer'
 import PressableButton from '../Wrappers/PressableButton'
 
-const PoolCard = ({ title, photo, isActive, enddate, isWinner }) => {
+const PoolCard = ({ title, photo, isActive, enddate, isWinner, openModal }) => {
+	const router = useRouter()
+
 	return (
 		<div className="flex h-[10rem] w-full flex-row gap-2">
 			<div className="max-h-[10rem] min-h-[10rem] min-w-[10rem] max-w-[10rem]">
@@ -47,13 +51,18 @@ const PoolCard = ({ title, photo, isActive, enddate, isWinner }) => {
 								className="h-fit w-full"
 								padding="py-2 px-7"
 								rounded="rounded-lg"
+								onClick={() => router.push('/deposit')}
 							>
 								<p className="text-sm tracking-tight text-black">
 									ADD MORE
 								</p>
 							</PressableButton>
 
-							<button>
+							<button
+								onClick={() => {
+									openModal(true)
+								}}
+							>
 								<p className="text-center text-sm font-bold tracking-tight text-orange1 underline">
 									WITHDRAW
 								</p>

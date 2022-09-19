@@ -117,6 +117,9 @@ const Index = () => {
 						<PressableButton
 							color="blue"
 							className="mt-20 w-[40%] self-center text-white"
+							onClick={() => {
+								setModalIsOpen(true)
+							}}
 						>
 							ARTIST IFANA
 						</PressableButton>
