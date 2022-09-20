@@ -13,7 +13,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 
 const SideBar = () => {
 	const router = useRouter()
-	const [emailModalIsOpen, setEmailModalIsOpen] = useState(false)
+	const { setHelpModalIsOpen } = useContext(SidebarContext)
 	const [helpTooltipOpen, setHelpTooltipOpen] = useState(false)
 
 	return (
@@ -70,7 +70,7 @@ const SideBar = () => {
 								</button>
 								<button
 									onClick={() => {
-										setEmailModalIsOpen(true)
+										setHelpModalIsOpen(true)
 									}}
 									className="flex flex-row gap-1 hover:text-white"
 								>
