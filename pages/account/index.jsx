@@ -457,24 +457,21 @@ const Index = () => {
 								My collection
 							</h3>
 
-							<div className="grid grid-cols-4 gap-10 border-2 border-red-500">
+							<div className="grid grid-cols-4 gap-10">
 								{badges.map((badge, index) => {
 									return (
 										<div
 											key={index}
-											className=" border-2 border-blue-500"
+											className="h-full w-full"
 										>
-											<button
+											<img
+												src={badge.image}
+												className="h-[13vw] w-[13vw] rounded-full border-[2px] object-cover"
+												alt="badge photo"
 												onClick={() => {
 													setPodModalIsOpen(true)
 												}}
-											>
-												<img
-													src={badge.image}
-													className="h-full w-full rounded-full border-[2px] object-cover"
-													alt="badge photo"
-												/>
-											</button>
+											/>
 										</div>
 									)
 								})}
